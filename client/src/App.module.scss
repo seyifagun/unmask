@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    
+}
+
+.initializer {
+    color: #333;
+    font-size: 16px;
+    padding : 1rem 0.5rem;
+    margin: 0 auto;
+}
+
+.loaderContainer {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.834);
+}
+
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 8px solid;
+    border-radius: 50%;
+    border-color: #f26825 transparent #f26825 transparent;
+    animation: spin-loader 1.2s linear infinite;
+}
+
+@keyframes spin-loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main {
+    & h1 {
+        text-align: center;
+        padding: 2rem 0;
+    }
+    & p {
+        text-align: center;
+    }
+    & .button {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem 0;
+
+        & .btn {
+            padding: 0.5rem;
+            border-radius: 10px;
+            border: transparent;
+            color: #333;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        & .btn.getQuoteBtn {
+            padding: 0.5rem;
+            background: transparent;
+            border-radius: 10px;
+            border: 2px solid #333;
+            color: #333;
+            font-weight: 700;
+            &:hover {
+                cursor: pointer;
+                background: #fff;
+            }
+        }
+    }
+    & .author {
+        font-weight: 600;
+        padding: 0.5rem 0;
+    }
+
+    & .quoteSection {
+        background-color: rgba(51, 51, 51, 0.3);
+        color: white;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        max-width: 530px;
+        margin-top: 2rem;
+    }
+}
